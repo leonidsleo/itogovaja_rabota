@@ -1,0 +1,47 @@
+ll@ll-VirtualBox:~/Загрузки$ apt download zip
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 zip amd64 3.0-12build2 [176 kB]
+Получено 176 kB за 2с (104 kB/s)    
+      
+ll@ll-VirtualBox:~/Загрузки$ ll
+итого 180
+drwxr-xr-x  2 ll ll   4096 фев 20 12:03 ./
+drwxr-x--- 17 ll ll   4096 фев 20 12:01 ../
+-rw-r--r--  1 ll ll 175730 мар 25  2022 zip_3.0-12build2_amd64.deb
+
+ll@ll-VirtualBox:~/Загрузки$ zip --help
+ll@ll-VirtualBox:~/Загрузки$ sudo dpkg -i zip_3.0-12build2_amd64.deb
+Выбор ранее не выбранного пакета zip.
+(Чтение базы данных … на данный момент установлено 213504 файла и каталога.)
+Подготовка к распаковке zip_3.0-12build2_amd64.deb …
+Распаковывается zip (3.0-12build2) …
+Настраивается пакет zip (3.0-12build2) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+ll@ll-VirtualBox:~/Загрузки$ zip --help
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+Zip 3.0 (July 5th 2008). Usage:
+zip [-options] [-b path] [-t mmddyyyy] [-n suffixes] [zipfile list] [-xi list]
+  The default action is to add or replace zipfile entries from list, which
+  can include the special name - to compress standard input.
+  If zipfile and list are omitted, zip compresses stdin to stdout.
+  -f   freshen: only changed files  -u   update: only changed or new files
+  -d   delete entries in zipfile    -m   move into zipfile (delete OS files)
+  -r   recurse into directories     -j   junk (don't record) directory names
+  -0   store only                   -l   convert LF to CR LF (-ll CR LF to LF)
+  -1   compress faster              -9   compress better
+  -q   quiet operation              -v   verbose operation/print version info
+  -c   add one-line comments        -z   add zipfile comment
+  -@   read names from stdin        -o   make zipfile as old as latest entry
+  -x   exclude the following names  -i   include only the following names
+  -F   fix zipfile (-FF try harder) -D   do not add directory entries
+  -A   adjust self-extracting exe   -J   junk zipfile prefix (unzipsfx)
+  -T   test zipfile integrity       -X   eXclude eXtra file attributes
+  -y   store symbolic links as the link instead of the referenced file
+  -e   encrypt                      -n   don't compress these suffixes
+  -h2  show more help
+  
+ll@ll-VirtualBox:~/Загрузки$ sudo dpkg -r zip
+(Чтение базы данных … на данный момент установлено 213518 файлов и каталогов.)
+Удаляется zip (3.0-12build2) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+ll@ll-VirtualBox:~/Загрузки$ zip --help
+bash: /usr/bin/zip: Нет такого файла или каталога

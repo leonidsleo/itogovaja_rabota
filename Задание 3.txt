@@ -1,0 +1,145 @@
+ll@ll-VirtualBox:~$ ls -l
+итого 44
+drwxr-xr-x 4 root root   4096 янв 17 16:05  Docker
+drwx------ 5 ll   ll     4096 янв 17 15:25  snap
+drwxrwx--- 1 root vboxsf 4096 янв 17 19:12  windows
+drwxr-xr-x 2 ll   ll     4096 янв 16 16:06  Видео
+drwxr-xr-x 3 ll   ll     4096 фев 19 15:25  Документы
+drwxr-xr-x 2 ll   ll     4096 янв 16 16:06  Загрузки
+drwxr-xr-x 3 ll   ll     4096 янв 17 16:36  Изображения
+drwxr-xr-x 2 ll   ll     4096 янв 16 16:06  Музыка
+drwxr-xr-x 2 ll   ll     4096 янв 16 16:06  Общедоступные
+drwxr-xr-x 2 ll   ll     4096 янв 16 16:06 'Рабочий стол'
+drwxr-xr-x 2 ll   ll     4096 янв 16 16:06  Шаблоны
+ll@ll-VirtualBox:~$ cd /home/ll/Загрузки/
+ll@ll-VirtualBox:~/Загрузки$ дд
+дд: команда не найдена
+ll@ll-VirtualBox:~/Загрузки$ ll
+итого 8
+drwxr-xr-x  2 ll ll 4096 янв 16 16:06 ./
+drwxr-x--- 17 ll ll 4096 фев 20 10:24 ../
+ll@ll-VirtualBox:~/Загрузки$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+--2024-02-20 10:28:12--  https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+Распознаётся dev.mysql.com (dev.mysql.com)… 184.51.238.43, 2001:2030:21:19e::2e31, 2001:2030:21:1a9::2e31
+Подключение к dev.mysql.com (dev.mysql.com)|184.51.238.43|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 302 Moved Temporarily
+Адрес: https://repo.mysql.com//mysql-apt-config_0.8.24-1_all.deb [переход]
+--2024-02-20 10:28:12--  https://repo.mysql.com//mysql-apt-config_0.8.24-1_all.deb
+Распознаётся repo.mysql.com (repo.mysql.com)… 104.81.113.179, 2a02:26f0:d200:888::1d68, 2a02:26f0:d200:889::1d68
+Подключение к repo.mysql.com (repo.mysql.com)|104.81.113.179|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+Длина: 18048 (18K) [application/x-debian-package]
+Сохранение в: ‘mysql-apt-config_0.8.24-1_all.deb’
+
+mysql-apt-config_0. 100%[===================>]  17,62K  --.-KB/s    за 0s      
+
+2024-02-20 10:28:13 (153 MB/s) - ‘mysql-apt-config_0.8.24-1_all.deb’ сохранён [18048/18048]
+
+ll@ll-VirtualBox:~/Загрузки$ ll
+итого 28
+drwxr-xr-x  2 ll ll  4096 фев 20 10:28 ./
+drwxr-x--- 17 ll ll  4096 фев 20 10:28 ../
+-rw-rw-r--  1 ll ll 18048 фев 15  2023 mysql-apt-config_0.8.24-1_all.deb
+ll@ll-VirtualBox:~/Загрузки$ ll
+итого 28
+drwxr-xr-x  2 ll ll  4096 фев 20 10:28 ./
+drwxr-x--- 17 ll ll  4096 фев 20 10:28 ../
+-rw-rw-r--  1 ll ll 18048 фев 15  2023 mysql-apt-config_0.8.24-1_all.deb
+ll@ll-VirtualBox:~/Загрузки$ sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+[sudo] пароль для ll: 
+Выбор ранее не выбранного пакета mysql-apt-config.
+(Чтение базы данных … на данный момент установлено 213643 файла и каталога.)
+Подготовка к распаковке mysql-apt-config_0.8.24-1_all.deb …
+Распаковывается mysql-apt-config (0.8.24-1) …
+Настраивается пакет mysql-apt-config (0.8.24-1) …
+Warning: apt-key should not be used in scripts (called from postinst maintainerscript of the package mysql-apt-config)
+Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+OK
+ll@ll-VirtualBox:~/Загрузки$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease              
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease            
+Сущ:4 https://download.docker.com/linux/ubuntu jammy InRelease                 
+Сущ:5 http://security.ubuntu.com/ubuntu jammy-security InRelease               
+Пол:6 http://repo.mysql.com/apt/ubuntu jammy InRelease [20,2 kB]               
+Ошб:6 http://repo.mysql.com/apt/ubuntu jammy InRelease
+  Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+Чтение списков пакетов… Готово
+W: Ошибка GPG: http://repo.mysql.com/apt/ubuntu jammy InRelease: Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+E: Репозиторий «http://repo.mysql.com/apt/ubuntu jammy InRelease» не подписан.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+ll@ll-VirtualBox:~/Загрузки$ sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 3A79BD29
+[sudo] пароль для ll: 
+Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+Executing: /tmp/apt-key-gpghome.OQ5fFf06Q3/gpg.1.sh --keyserver pgp.mit.edu --recv-keys 3A79BD29
+^C
+gpg: signal 2 caught ... exiting
+ll@ll-VirtualBox:~/Загрузки$ cd
+ll@ll-VirtualBox:~$ cd /etc/apt/sources.list.d/
+ll@ll-VirtualBox:/etc/apt/sources.list.d$ ll
+итого 16
+drwxr-xr-x 2 root root 4096 фев 20 10:31 ./
+drwxr-xr-x 8 root root 4096 фев 20 10:31 ../
+-rw-r--r-- 1 root root  112 янв 17 12:49 docker.list
+-rw-r--r-- 1 root root  495 фев 20 10:31 mysql.list
+ll@ll-VirtualBox:/etc/apt/sources.list.d$ sudo nano mysql.list 
+ll@ll-VirtualBox:/etc/apt/sources.list.d$ cd
+ll@ll-VirtualBox:~$ sudo apt-get update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Пол:2 http://repo.mysql.com/apt/ubuntu jammy InRelease [20,2 kB]                                                                                                                      
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease                                                                                                                     
+Сущ:4 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease                                                                           
+Сущ:5 https://download.docker.com/linux/ubuntu jammy InRelease                                                                                
+Пол:6 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]                             
+Ошб:2 http://repo.mysql.com/apt/ubuntu jammy InRelease
+  Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+Чтение списков пакетов… Готово
+W: Ошибка GPG: http://repo.mysql.com/apt/ubuntu jammy InRelease: Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+E: Репозиторий «http://repo.mysql.com/apt/ubuntu jammy InRelease» не подписан.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+
+ll@ll-VirtualBox:~$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
+Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+Executing: /tmp/apt-key-gpghome.upJZt5zSh1/gpg.1.sh --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
+gpg: ключ B7B3B788A8D3785C: импортирован открытый ключ "MySQL Release Engineering <mysql-build@oss.oracle.com>"
+gpg: Всего обработано: 1
+gpg:               импортировано: 1
+ll@ll-VirtualBox:~$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease                                         
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease                                       
+Сущ:4 http://security.ubuntu.com/ubuntu jammy-security InRelease                                          
+Сущ:5 https://download.docker.com/linux/ubuntu jammy InRelease                                            
+Пол:6 http://repo.mysql.com/apt/ubuntu jammy InRelease [20,2 kB]
+Пол:7 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 Sources [964 B]
+Пол:8 http://repo.mysql.com/apt/ubuntu jammy/mysql-apt-config i386 Packages [566 B]
+Пол:9 http://repo.mysql.com/apt/ubuntu jammy/mysql-apt-config amd64 Packages [566 B]
+Пол:10 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 Packages [14,6 kB]
+Пол:11 http://repo.mysql.com/apt/ubuntu jammy/mysql-tools i386 Packages [458 B]
+Пол:12 http://repo.mysql.com/apt/ubuntu jammy/mysql-tools amd64 Packages [4 123 B]
+Получено 41,5 kB за 3с (14,3 kB/s)         
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Может быть обновлено 56 пакетов. Запустите «apt list --upgradable» для их показа.
+W: http://repo.mysql.com/apt/ubuntu/dists/jammy/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+
+ll@ll-VirtualBox:~$ sudo apt install mysql-server
+ll@ll-VirtualBox:~$ sudo systemctl status mysql
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2024-02-20 11:27:44 MSK; 5min ago
+       Docs: man:mysqld(8)
+             http://dev.mysql.com/doc/refman/en/using-systemd.html
+   Main PID: 10352 (mysqld)
+     Status: "Server is operational"
+      Tasks: 37 (limit: 3438)
+     Memory: 359.0M
+        CPU: 17.048s
+     CGroup: /system.slice/mysql.service
+             └─10352 /usr/sbin/mysqld
+
+фев 20 11:27:37 ll-VirtualBox systemd[1]: Starting MySQL Community Server...
+фев 20 11:27:44 ll-VirtualBox systemd[1]: Started MySQL Community Server.

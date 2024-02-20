@@ -1,0 +1,80 @@
+  212  cd /home/ll/Документы/
+  213  ll
+  214  clear
+  215  cat > Домашние животные
+  216  cat > Домашние_животные
+  217  cat Домашние_животные
+  218  cat >> Домашние_животные
+  219  cat Домашние_животные
+  220  cat > Вьючные_животные
+  221  cat Вьючные_животные
+  222  cat Вьючные_животные Домашние_животные
+  223  cat Вьючные_животные Домашние_животные > Животные
+  224  cat Животные
+  225  ll
+  226  rm Домашние
+  227  ll
+  228  mv Животные Друзья_человека
+  229  ll
+  230  mkdir Животные
+  231  ll
+  232  mv Друзья_человека Животные/
+  233  ll
+  234  cd /Животные
+  235  cd /home/ll/Документы/Животные/
+  236  ll
+  237  systemctl status mysql
+  238  sudo ss -ntlp
+  239  apt update
+  240  sudo apt update
+  241  systemctl status
+  242  systemctl status 
+  243  systemctl status cron
+  244  ll
+  245  ls -l
+  246  cd /home/ll/Загрузки/
+  247  дд
+  248  ll
+  249  wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+  250  ll
+  251  sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+  252  sudo apt update
+  253  sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 3A79BD29
+  254  cd
+  255  cd /etc/apt/sources.list.d/
+  256  ll
+  257  sudo nano mysql.list 
+  258  cd
+  259  sudo apt-get update
+  260  sudo systemctl status mysql
+  261  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
+  262  sudo apt update
+  263  sudo apt install mysql-server
+  264  clear
+  265  sudo systemctl status mysql
+  266  clear
+  267  ls -l
+  268  cd /home/ll/Загрузки/
+  269  ll
+  270  rm mysql-apt-config_0.8.24-1_all.deb 
+  271  ll
+  272  zip --help
+  273  clear
+  274  dpkg -l
+  275  clear
+  276  dpkg -l zip
+  277  sudo apt show zip
+  278  sudo apt purge zip
+  279  sudo apt show zip
+  280  dpkg -l zip
+  281  clear
+  282  apt download zip
+  283  ll
+  284  zip --help
+  285  sudo dpkg -i zip_3.0-12build2_amd64.deb
+  286  zip --help
+  287  sudo dpkg -r zip
+  288  zip --help
+  289  clear
+  290  hostory
+  291  history
